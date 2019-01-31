@@ -28,6 +28,7 @@ heroes_series = pd.Series(heroes_dict)
 print(heroes_series)
 
 
+
 # 22개의 행과 4개의 열을 갖는 딕셔너리를 정의합니다.
 heroes = {
     "name":[

@@ -79,6 +79,28 @@ print(heroes_df)
 
 
 # read_csv()를 이용해 CSV 파일을 불러옵니다.
-
 csv_data = pd.read_csv('data/book_list.csv')
-print(csv_data)
+#열 제목이 있는 형태로 출력합니다.
+print(csv_data.head())
+
+#열 제목을 직접 설정합니다.
+columns = ['제목', '저자', '번역자', '출간일', 'isbn']
+#열 제목이 없는 csv파일을 불러옵니다.
+#인덱스가 없도록 설정한 다음 names 파라미터의 값을 columns로 설정합니다.
+csv_data2 = pd.read_csv('data/book_list_headless.csv', header=None, names=columns)
+
+#열 제목이 있는 형태로 5개데이터를 출력합니다.
+print(csv_data2.head())
+
+#read_excel()을 이용해 엑셀 파일을 불러옵니다.
+# 이때 heroes 시트를 선택하도록 합니다.
+# pip install xlrd : 파일 데이터 추출
+# pip install openpyxl : 파일 읽거나 저장
+heroes_excel = pd.read_excel('data/heroes.xlsx', 'heroes')
+#열제목이 있는 형태로 5개 데이터를 출력합니다.
+print(heroes_excel.head())
+
+
+
+
+

@@ -28,6 +28,7 @@ heroes_series = pd.Series(heroes_dict)
 print(heroes_series)
 
 
+
 # 22개의 행과 4개의 열을 갖는 딕셔너리를 정의합니다.
 heroes = {
     "name":[
@@ -72,3 +73,12 @@ heroes = {
     ]
 }
 
+# 딕셔너리를 dataFrame타입으로 변환합니다.
+heroes_df = pd.DataFrame(heroes)
+print(heroes_df)
+
+
+# read_csv()를 이용해 CSV 파일을 불러옵니다.
+
+csv_data = pd.read_csv('data/book_list.csv')
+print(csv_data)

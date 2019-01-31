@@ -3,12 +3,11 @@ import sqlite3
 conn = sqlite3.connect('test.db')
 cursor = conn.cursor()
 
-cursor.execute("SELECT NAME, PHONE, EMAIL FROM PHONEBOOK")
+cursor.execute("select * from phonebook")
 
 rows = cursor.fetchall()
 for row in rows:
-   print ("NAME: {0}, PHONE: {1}, EMAIL: {2} ".
-        format(row[0], row[1], row[2]))
+    print("name:{0}, phone:{1}, email:{2}".format(row[0], row[1], row[2]))
 
 cursor.close()
 conn.close()
